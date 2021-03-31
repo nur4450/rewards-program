@@ -18,7 +18,7 @@ public class HomeController {
 
     @GetMapping("home-page")
     public String displayHomePage(Model model) {
-        //I am strictly creating transactions here since I cannot use live data
+        //Creating transactions here
         HashMap<String, ArrayList<Double>> customerTransactions = new HashMap<>();
         ArrayList<Double> transactionListJanuary = new ArrayList<>();
         transactionListJanuary.add(120.00);
