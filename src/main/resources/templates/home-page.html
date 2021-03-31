@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http.www.thymeleaf.org/">
+<head>
+    <meta charset="=" UTF-8/>
+    <title></title>
+</head>
+<body>
+
+
+    <p th:text="'Dear ' + ${customerName} + ','"></p>
+
+    <p th:text="'You have earned ' + ${earnedRewardPointsInJanuary} + ' reward points in first month.'"></p>
+    <p th:text="'You have earned ' + ${earnedRewardPointsInFebruary} + ' reward points in second month.'"></p>
+    <p th:text="'You have earned ' + ${earnedRewardPointsInMarch} + ' reward points in third month.'"></p>
+
+    <p th:text="'You have earned ' + ${earnedTotalRewardPoints} + ' total reward points during 3 month period.'"></p>
+</body>
+</html>
