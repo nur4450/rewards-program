@@ -13,11 +13,11 @@ public class CustomerService {
         Integer totalRewardPoints = customerTotalRewardPoints;
 
             for(Double d : customerTransactions.get(month)){
-                int doubleToInt = (int)Math.round(d);
-                if(doubleToInt >= 50 && doubleToInt < 100){
+                int doubleToInt = (int)Math.floor(d);
+                if(doubleToInt > 50 && doubleToInt <= 100){
                     totalRewardPoints += (doubleToInt - 50);
                 }
-                if(doubleToInt >= 100){
+                if(doubleToInt > 100){
                     totalRewardPoints += ((doubleToInt - 100) * 2) + 50;
                 }
             }
@@ -31,11 +31,11 @@ public class CustomerService {
 
         for(String month : customerTransactions.keySet()){
                 for (Double d : customerTransactions.get(month)) {
-                    int doubleToInt = (int) Math.round(d);
-                    if (doubleToInt >= 50 && doubleToInt < 100) {
+                    int doubleToInt = (int) Math.floor(d);
+                    if (doubleToInt > 50 && doubleToInt <= 100) {
                         totalRewardPoints += (doubleToInt - 50);
                     }
-                    if (doubleToInt >= 100) {
+                    if (doubleToInt > 100) {
                         totalRewardPoints += ((doubleToInt - 100) * 2) + 50;
                     }
                 }
